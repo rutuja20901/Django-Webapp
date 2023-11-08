@@ -1,0 +1,683 @@
+{% extends "base.html" %}
+
+{% block title %} Services {% endblock title %}
+
+{% block body %} 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+
+      .about-box{
+        background-image:url("/static/images/bg-about.png");
+        background-position:center;
+        background-size:cover;
+        min-height:560px
+      }
+
+      .about-box .bg-cap{
+        padding-top:190px;
+        text-align:center;
+      }
+
+      .bg-cap h2{
+        color: #000a2d;
+        font-size: 55px;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-family: 'Rufina', serif;
+      }
+
+      p{
+        margin-bottom: 30px;
+        display: block;
+        color: #3589f1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    h1{
+        font-size:56px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        color: #000a2d;
+        line-height: 1.2;
+        display: block;
+        font-family: 'Rufina', serif;
+        font-style:normal;
+    }
+
+    .heading{
+        font-size:40px;
+    }
+
+    .btn{
+        cursor:pointer;
+        color:#fff;
+        background: #0b1416;
+        padding: 30px 36px;
+        box-shadow: 0px 10px 30px 0px rgba(249, 248, 249, 0.1);
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: "Rubik", sans-serif;
+        font-size:14px;
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 0;
+        position: relative;
+        z-index: 1;
+        border: 0;
+        overflow: hidden;
+        margin: 0;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    .con-item{
+        background:#3589f1;
+    }
+
+    .con-item p{
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        display: block;
+        line-height: 1.7;
+        font-size: 18px;
+    }
+
+    .know-container{
+        width:100%;
+        display:flex;
+        margin-top:8rem;
+    }
+
+    .know-left{
+        width:50%;
+        padding:4rem 4rem 0 3rem;
+    }
+
+    .know-right{
+        width:50%;
+    }
+
+    span{
+        font-size: 16px;
+        color: #64676c;
+        line-height: 1.6;
+        margin-bottom: 35px;
+        padding-right: 50px;
+    }
+
+    .con-service .heading{
+        font-size:40px;
+    }
+
+    .about-font-img{
+        position: absolute;
+        z-index: 1;
+        left: 47%;
+        top: 76rem;
+    }
+
+    .about-back-img{
+        position: absolute;
+        top: auto;
+        right: 0;
+        z-index: 0;
+        margin-right:3rem;
+    }
+
+    .service-box h5{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 21px;
+        display: block;
+        font-family:"Rufina", serif;
+        font-style:normal;
+    }
+
+    .service-box p{
+        margin-bottom: 36px;
+        color: #57667e;
+        font-size: 14px;
+        line-height:30px;
+        font-weight:normal;
+    }
+
+    .icon-box{
+        color: #3589f1;
+        font-size: 50px;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .process-container{
+        background-image:url("/static/images/bg-4.png");
+        background-size:cover;
+        background-position:center;
+        min-height:80vh;
+        padding-bottom:140px;
+        padding-top:150px;
+    }
+
+    .dropdown{
+        width:18%;
+    }
+
+    .btn-process{
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        border-radius: 0px;
+        padding: 11px 19px 11px 17px;
+        color: #616875;
+        line-height: 42px;
+        border: 0;
+        position: relative;
+        font-size:14px;
+        text-transform:capitalize;
+        font-weight:normal;
+
+    }
+
+   
+  
+
+    .input-form input{
+        height: 60px;
+        width: 100%;
+        color: #777777;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 9px 5px 9px 22px;
+        border: none;
+        position: relative;
+        text-align:center;
+    }
+
+    .search-form{
+        width:20%;
+    }
+
+    .search-form a{
+        border: 5px solid #fff;
+        width: 100%;
+        height: 60px;
+        background: #3589f1;
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        display: block;
+        padding: 15px;
+        border-radius: 0px;
+        text-transform: uppercase;
+        line-height: 22px;
+        font-size: 14px;
+        list-style:none;
+        text-decoration:none;
+    }
+
+    .drop-button{
+        display:flex;
+        text-align:center;
+        margin-left:12rem;
+    }
+
+
+    .member-container{
+        margin-top:12rem;
+    }
+    .team-caption h3{
+        font-family: "Rufina", serif;
+        color: #000a2d;
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .team-caption h3 a{
+        color: #33384e;
+        font-weight: 700;
+        font-size: 25px;
+        text-decoration:none;
+        font-family: "Rufina", serif;
+    }
+
+    .team-caption h3 a:hover{
+        color:#0056b3;
+    }
+
+    .team-caption p{
+        font-family: "Rubik", sans-serif;
+        color: #57667e;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+
+    .single-team .team-img img{
+        width:100%;
+        transform:scale(1);
+        transition:all 0.6s ease-out 0s;
+        vertical-align:middle;
+        border-style:none;
+    }
+
+    .team-img{
+        overflow:hidden;
+        margin-bottom:19px;
+        position:relative;
+    }
+
+
+    .single-team:hover .team-img img{
+        transform:scale(1.1);
+    }
+
+    .img-member{
+        padding: 0 1rem 0 2rem;
+    }
+
+    .news-wrapper{
+        width:100%;
+        display:flex;
+    }
+
+    .news-container{
+        margin-top:12rem;
+    }
+
+    .news-left{
+        width:50%;
+        padding:2rem 1rem 2rem 3rem;
+    }
+
+    .news-right{
+        width:50%;
+        padding:2rem 3rem 2rem 1rem;
+    }
+
+    .single-news .news-img img{
+        width:100%;
+        transform:scale(1);
+        transition:all 0.6s ease-out 0s;
+        vertical-align:middle;
+        border-style:none;
+    }
+
+    .news-img{
+        overflow:hidden;
+        margin-bottom:19px;
+        position:relative;
+    }
+
+
+    .single-news:hover .news-img img{
+        transform:scale(1.1);
+    }
+
+    .news-caption h2{
+        font-family: Rubik, sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .news-caption h2 a{
+        padding-right: 56px;
+        margin-bottom: 17px;
+        text-decoration: none;
+        display: block;
+        color:#000;
+    }
+
+    .news-caption p{
+        font-family: Rubik, sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: normal;
+        color:rgb(87, 102, 126);
+    }
+
+    .news-caption h2 a:hover{
+        color:rgb(53, 137, 241);
+    }
+
+    /*--Testimonials section--*/
+
+    .review-container{
+        width:100%;
+        text-align:center;
+        background-color:#021a47;
+        margin-top:12rem;
+    }
+
+    .review-container .testimonial-top-cap p{
+        color: #fff;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 0 3px;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
+    .review-container .testimonial-top-cap{
+        margin-top:12rem;
+    }
+
+    .review-container .testimonial-top-cap img{
+        margin-bottom: 50px;
+        width: auto;
+        display: inline-block;
+    }
+
+    .review-container .testimonial-founder{
+        padding-bottom:10rem;
+    }
+    .review-container .founder-text{
+        margin-left:20px;
+    }
+
+    .review-container .founder-text span{
+        color:#fff;
+        padding-right:17px;
+    }
+
+    .review-container .founder-text p{
+        color: #fff;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .single-testimonial{
+        width: 1231px;
+    }
+
+    .heading-mobile{
+        visibility:hidden;
+    }
+
+    .heading-desk{
+        visibility:visible;
+        width: 36rem;
+margin-left: 21rem;
+margin-top: -6rem
+    }
+
+   
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    @media (max-width: 768px){
+        .banner-container{
+            display:block;
+            width:100%;
+        }
+
+        .banner-right{
+            width:100%;
+            text-align:center;
+            padding:1rem;
+        }
+
+        .banner-right p{
+            padding-right: 106px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        h1{
+            font-size: 25px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            text-align:left;
+        }
+
+        .heading{
+            font-size:27px;
+            text-align:center;
+            padding:15px;
+        }
+
+        .heading2{
+            font-size:27px;
+            text-align:left;
+            padding:0;
+        }
+
+        .banner-right .btn{
+            margin-left:-10rem;
+        }
+
+        .banner-left{
+            width:100%;
+        }
+
+        .grid-container{
+            visibility:hidden;
+        }
+
+        .know-container{
+            display:block;
+            margin-top:-32rem
+        }
+
+        .about-font-img{
+            visibility:hidden;
+        }
+
+        .about-back-img{
+            margin-right:28px;
+            margin-top:2rem;
+        }
+
+        .about-back-img img{
+            width:329px;
+        }
+
+        .know-right{
+            width:100%;
+        }
+
+        .know-left{
+            width:100%;
+            padding:18px;
+        }
+
+        .service-container{
+            margin-top:28rem;
+        }
+
+        .con-service .heading{
+            font-size: 27px;
+        }
+
+        .drop-button{
+            display:block;
+            margin-left:0;
+        }
+
+        .dropdown{
+            width:100%;
+            padding:1rem;
+        }
+
+        .input-form{
+            padding:1rem;
+        }
+
+        .search-form{
+            width:100%;
+            padding:1rem;
+        }
+
+        .news-wrapper{
+            width:100%;
+            display:block;
+        }
+
+        .news-left{
+            width:100%;
+            padding:1rem 0rem 1rem 1rem;
+        }
+
+        .news-right{
+            width:100%;
+            padding:1rem 0rem 1rem 1rem;
+        }
+
+        .review-container .testimonial-top-cap p{
+            font-size:18px;
+        }
+
+        .single-testimonial{
+            width:auto;
+        }
+
+        .heading-desk{
+            visibility:hidden;
+            width:0;
+            margin-left:0;
+        }
+
+        .heading-mobile{
+            visibility:visible;
+            margin-bottom:-18rem;
+        }
+
+       
+
+        
+
+    </style>
+
+  </head>
+  <body>
+
+
+    <div class="about-box">
+        <div class="bg-cap">
+          <h2>Services</h2>
+        </div>
+      </div>
+
+       <!--Services Start-->
+    <div class="service-container">
+        <div class="con-service" style="text-align:center">
+            <p>Services that we are providing</p>
+            <h1 class="heading heading-mobile">High Performance Services For All Industries.</h1>
+            <h1 class="heading heading-desk">High Performance Services For All Industries.</h1>
+        </div>
+        <div class="container px-4 py-3" id="icon-grid">
+            <h2 class="pb-2 border-bottom"></h2>
+        
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 service-box">
+              <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box" style="text-align:center">
+                        work
+                    </span>
+                <div>
+                  <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Business Loan</h5> <br>
+                  <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+              </div>
+              <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        real_estate_agent
+                    </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Commercial Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        house_siding
+                        </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Construction Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        thumb_up
+                        </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Property Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4 py-3" id="icon-grid">
+            
+        
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 service-box">
+              <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box" style="text-align:center">
+                        work
+                    </span>
+                <div>
+                  <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Business Loan</h5> <br>
+                  <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+              </div>
+              <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        real_estate_agent
+                    </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Commercial Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        house_siding
+                        </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Construction Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <span class="material-symbols-outlined icon-box">
+                        thumb_up
+                        </span>
+                    <div>
+                        <h5 class="fw-bold mb-0 fs-4 text-body-emphasis">Property Loan</h5> <br>
+                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Services End-->
+    
+  </body>
+  </html>
+{% endblock body %}
