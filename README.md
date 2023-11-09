@@ -34,4 +34,8 @@ python manage.py runserver
 
 ![127 0 0 1_8000_about](https://github.com/rutuja20901/Django-Webapp/assets/77929443/6b6a8c2d-9f43-4d65-9906-3c0ecb418c63)
 
+### Services page
+
+![127 0 0 1_8000_services](https://github.com/rutuja20901/Django-Webapp/assets/77929443/3a594e53-9e87-4ee2-850c-9fc28c4ad6f3)
+
 
