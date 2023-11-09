@@ -27,5 +27,7 @@ python manage.py runserver
 
 ## Project Snapshot
 ### Home page
-![Uploading 127.0.0.1_8000_index.png…]()
+
+![127 0 0 1_8000_index](https://github.com/rutuja20901/Django-Webapp/assets/77929443/bc1fa9a4-8f99-4193-8c80-d61f2b57f808)
+
 
