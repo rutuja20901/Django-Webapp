@@ -27,4 +27,5 @@ python manage.py runserver
 
 ## Project Snapshot
 ### Home page
+![Uploading 127.0.0.1_8000_index.png…]()
 
